@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form #myForm="ngForm" (ngSubmit)="sub(myForm)">
+        <select name="em" id="" ngModel>
+            <option *ngFor="let i of data" value="{{i.emid}}">{{i.emname}}</option>
+            
+        </select><br>
+        <input type="submit" value="Delete">
+    </form>
+ 
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor="let i of data">
+            <td>
+                {{i.emid}}
+            </td>
+            <td>
+                {{i.emname}}
+            </td>
+            <td>
+                {{i.emsal}}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

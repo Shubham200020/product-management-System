@@ -1,0 +1,69 @@
+<div class="container">
+  <form #ProductForm="ngForm" (ngSubmit)="handleSubmit(ProductForm)" >
+    Search:<input type="search"  placeholder="Search By Id" name="productId" ngModel >
+    <select name="opt" ngModel>
+      <option ngValue="id" selected>By ID</option>
+      <option ngValue="name">By Name</option>
+      <option ngValue="componyname">By Compony Name</option>
+    </select>
+
+    <input type="submit" value="Search">
+
+    <select>
+      <option ngValue="prdec">price Desc</option>
+      <option ngValue="princ">price inc</option>
+  <!-- <option ngValue="componyname">By Compony Name</option> -->
+    </select>
+  </form>
+
+  <button (click)="getProducts()">Show All </button>
+  <table width="100%" *ngIf="bool==true">
+      <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Compony</th>
+        <th>Product Price</th>
+        <th>Quantity</th>
+        <th colspan="2">Action</th>
+      </tr>
+      <tr  *ngFor="let i of lstOfProducts" >
+        <td>{{i.id}}</td>
+        <td>{{i.name|uppercase}}</td>
+        <td>{{i.componyName|uppercase}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.quantity}}</td>
+        <td><button (click)="butt(i)">Buy</button></td>
+        <td><button (click)="sell(i)">Shell</button></td>
+      </tr>
+
+  </table>
+
+
+
+  <table  width="100%" *ngIf="bool==false">
+    <tr>
+      <th>Product Id</th>
+      <th>Product Name</th>
+      <th>Compony</th>
+      <th>Product Price</th>
+      <th>Quantity</th>
+      <th colspan="2">Action</th>
+      
+    </tr>
+
+    <tr  *ngFor="let i of productById" >
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.componyName}}</td>
+      <td>{{i.price}}</td>
+      <td>{{i.quantity}}</td>
+      <td><button (click)="butt(i)">Buy</button></td>
+      
+      <td><button (click)="sell(i)">Shell</button></td>
+    </tr>
+  </table>
+
+
+  
+
+</div>

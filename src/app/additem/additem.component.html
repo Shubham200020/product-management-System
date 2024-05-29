@@ -1,0 +1,34 @@
+
+<form [formGroup]="productDete" >
+	<form [formGroup]="product">
+		<div class="form-group">
+			<label for="name">Product Name</label>
+			<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name" formControlName="name" required >
+			<small id="emailHelp" class="form-text text-muted">Product Name</small>
+		  </div>
+		  <div class="form-group">
+			<label for="name">Compony Name</label>
+			<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Compony Name" formControlName="componyName" required >
+			<small id="emailHelp" class="form-text text-muted">Compony Name</small>
+		  </div>
+		  <div class="form-group">
+			<label for="name">Quantity</label>
+			<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Quantity" formControlName="quantity" required >
+			<small id="emailHelp" class="form-text text-muted">Quantity</small>
+		  </div>
+		  <div class="form-group">
+			<label for="name">Price</label>
+			<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" formControlName="price" required >
+			<small id="emailHelp" class="form-text text-muted">Price</small>
+		  </div>
+		
+	</form> 
+    <div class="form-group">
+    	<label for="name">buyingPrice</label>
+    	<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" formControlName="buyingPrice" required >
+    	<small id="emailHelp" class="form-text text-muted">buyingPrice</small>
+  	</div>
+</form>
+{{product.value|json}}<br>
+<!-- {{productDete.value|json}} -->
+{{productDete.value|json}}

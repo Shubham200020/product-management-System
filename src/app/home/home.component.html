@@ -1,0 +1,19 @@
+
+<table class="table">
+    <tr>
+        <th>Product Name</th>
+        <th>Product Compony</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th colspan="2" class="prac">Action</th>
+    </tr>
+   
+    <tr *ngFor="let i of dataList">
+        <td>{{i.name}}</td>
+        <td>{{i.componyName}}</td>
+        <td>{{i.quantity}}</td>
+        <td>{{i.price}}</td>
+        <td><button>Shell</button></td>
+        <td><button>Buy</button></td>
+    </tr>
+</table>

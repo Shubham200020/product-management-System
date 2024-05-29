@@ -1,0 +1,26 @@
+table{
+    width: 100%;
+
+}
+*{
+    background-color: rgb(231, 228, 224);
+}
+td{
+    text-align: center;
+   background-color: aliceblue;
+   font-size: large; 
+}
+table button{
+    width: 100%;
+}
+.container{
+    position: relative;
+}
+.ss{
+    position: absolute;
+    background-color: aqua;
+    height: 20%;
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 45%;
+}

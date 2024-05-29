@@ -1,0 +1,21 @@
+<div id="sk">
+<select  [(ngModel)]="produ" >
+    <label>Select Product</label>
+    <option *ngFor="let i of lstOfProducts" ngValue="{{i|json}}">{{i.name}} || {{i.componyName}}</option>
+</select><br>
+</div>
+<form [formGroup]="data" (submit)="sub()" >
+    <input type="hidden"  formControlName="id" ><br>
+    <input type="hidden" value="0"  formControlName="margin"  >
+    <input type="hidden"  formControlName="produ" >
+    <input type="hidden" value="0"  formControlName="expectedProfit"  >
+    <input type="hidden" value="0"  formControlName="correntProfit"  >
+    <input type="hidden" value="0"  formControlName="grosPrice"  >
+    <label>Buying Price</label>
+    <input type="text" placeholder="Buying Price" formControlName="buyingPrice" id="" ><br>
+    <input type="submit" >
+</form>
+{{data.value|json}}
+<br>
+
+{{produ}}

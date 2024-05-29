@@ -1,0 +1,15 @@
+*{
+    background-color: azure;
+}
+select{
+ width: 20px;   
+}
+option{
+    width: 180px;
+}
+table{
+    width: 100%;
+}
+td{
+    text-align: center;
+}

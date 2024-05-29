@@ -1,0 +1,14 @@
+
+<form #ProductForm="ngForm" (ngSubmit)="handleSubmit(ProductForm)" align="center">
+ProductId<input type="text" name="id" ngModel><br><br>
+ProductName<input type="text" name="name" ngModel><br><br>
+Product Compony<input type="text" name="componyName" ngModel><br><br>
+Product Price<input type="text" name="price" ngModel><br><br>
+Quantity<input type="number" name="quantity" ngModel><br><br>
+<input type="submit" value="Submit">
+
+</form>
+{{ProductForm.value|json}}
+
+
+
