@@ -1,0 +1,28 @@
+<p>showprductdetels works!</p>
+
+<table class="table">
+ <tr>
+    <th>product Name</th>
+    <th>componyName</th>
+    <th>expectedProfit</th>
+    <th>correntProfit</th>
+    <th>buyingPrice</th>
+    <th>Total Expected Gross Price</th>
+    <th>Current grosPrice</th>
+    <th>margin</th>
+    <th>quantity</th>
+    <th>price</th>
+ </tr>
+ <tr *ngFor="let i of data">
+    <td>{{i.produ.name|uppercase}}</td>
+    <td>{{i.produ.componyName|uppercase}}</td>
+    <td>{{i.expectedProfit}}</td>
+    <td>{{i.correntProfit}}</td>
+    <td>{{i.buyingPrice}}</td>
+    <td>{{i.grosPrice}}</td>
+    <td>{{i.corrgrosPrice}}</td>
+    <td>{{i.margin}}</td>
+    <td>{{i.produ.quantity}}</td>
+    <td>{{i.produ.price}}</td>
+ </tr>
+</table>

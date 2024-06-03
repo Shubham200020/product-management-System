@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { EmployeeComponent } from '../employee/employee.component';
 
 @Component({
   selector: 'app-add-products',
   standalone: true,
-  imports: [FormsModule,CommonModule,HttpClientModule],
+  imports: [FormsModule,CommonModule,HttpClientModule,EmployeeComponent],
   templateUrl: './add-products.component.html',
   styleUrl: './add-products.component.css'
 })
